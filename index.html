@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Website</title>
-    <link rel="stylesheet" href="SUNNY.css">
+    <link rel="stylesheet" href="music.css">
+    <script src="music.js" defer></script>
 </head>
 
 <body>
     <div class="container">
         <div class="navbar">
-            <img src="media/musiclogo.png" class="logo" height="100" width="150">
+            <img src="../media/musiclogo.png" class="logo" height="100" width="150">
             <ul>
-                <li><a href="https://gaana.com/songs" target="_blank">ALL</a></li>
+                <li><a href="https://gaana.com/" target="_blank">ALL</a></li>
                 <li><a href="https://gaana.com/newrelease" target="_blank">NEW SONGS</a></li>
                 <li><a href="https://gaana.com/old-songs" target="_blank">OLD SONGS</a></li>
                 <li><a href="https://gaana.com/radio" target="_blank">RADIO</a></li>
@@ -25,30 +26,24 @@
                 <h1>FEEL <br> THE <br> BEAT</h1>
             </div>
             <div class="right-col">
-                <p>Click Here To Listen</p>
-                <img src="media/playy.png" height="80" width="60" id="icon">
+                <h2 id="songTitle">Giorne Theme</h2>
+                <button onclick="playPrevious()">
+                    <img src="media/previous.png" alt="Previous">
+                </button>
+                <img src="media/play-button-icon.png" height="80" width="60" id="icon">
+                <button onclick="playNext()">
+                    <img src="media/previous.png" alt="Next" style="transform: rotate(180deg);">
+                </button>
             </div>
         </div>
     </div>
-    <audio id="Mysong">
-
+    <audio id="Mysong" >
         <source src="media/Giorno theme.mp3" type="audio/mp3">
+        <source src="media/M500001khJxi223cL1.mp3" type="audio/mp3">
+        <source src="media/DREAM_WAVE.mpeg" type="audio/mpeg">
+        <source src="media/wakeupsong.mpeg" type="audio/mpeg">
+        <!-- Add more source elements for additional songs -->
     </audio>
-    <script>
-        var Mysong = document.getElementById("Mysong");
-        var icon = document.getElementById("icon");
-
-        icon.onclick = function () {
-            if (Mysong.paused) {
-                Mysong.play();
-                icon.src = "media/pausee.png";
-            } else {
-                Mysong.pause();
-                icon.src = "media/playy.png";
-            }
-        }
-
-    </script>
 </body>
 
 </html>
